@@ -24,11 +24,11 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'pose_goal = python_examples.pose_goal:main',
-            'joint_goal = python_examples.joint_goal:main',
-            'named_goal = python_examples.named_goal:main',
-            'pose_goal_linear = python_examples.pose_goal_linear:main',
-            'pose_goal_with_objects = python_examples.pose_goal_with_objects:main'
+            'pose_goal = moveit2py_humble_example.pose_goal:main',
+            'joint_goal = moveit2py_humble_example.joint_goal:main',
+            'named_goal = moveit2py_humble_example.named_goal:main',
+            'pose_goal_linear = moveit2py_humble_example.pose_goal_linear:main',
+            'pose_goal_with_objects = moveit2py_humble_example.pose_goal_with_objects:main'
         ],
     },
 )
