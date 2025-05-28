@@ -1,10 +1,6 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
-from rclpy.logging import get_logger
-from geometry_msgs.msg import PoseStamped, TransformStamped
-from tf2_ros import TransformBroadcaster
+from geometry_msgs.msg import PoseStamped
 
 from moveit.planning import MoveItPy
 
@@ -119,7 +115,7 @@ def add_collision_objects(planning_scene_monitor):
 
 class MoveItPoseGoalNode(Node):
     def __init__(self):
-        super().__init__("moveit_py_pose_goal_broadcaster")
+        super().__init__("moveit_py_with_objects")
         self.logger = self.get_logger()
 
         # MoveItPy setup

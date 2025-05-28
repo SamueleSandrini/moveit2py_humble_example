@@ -1,10 +1,6 @@
-#!/usr/bin/env python3
-
 import rclpy
 from rclpy.node import Node
-from rclpy.logging import get_logger
-from geometry_msgs.msg import PoseStamped, TransformStamped
-from tf2_ros import TransformBroadcaster
+from geometry_msgs.msg import PoseStamped
 
 from moveit.planning import MoveItPy
 from moveit import PlanRequestParameters
@@ -28,8 +24,6 @@ class MoveItPoseGoalLinearNode(Node):
 
         # self.pose_goal.pose.orientation.w = 1.0
         self.pose_goal.pose.position.x = 0.08
-        self.tf_broadcaster = TransformBroadcaster(self)
-        self.broadcast_pose_goal_tf()
         # Set goal in MoveIt
         self.ur_arm.set_goal_state(pose_stamped_msg=self.pose_goal, 
                                    pose_link="ur10e_tool0")
