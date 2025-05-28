@@ -51,7 +51,7 @@ def generate_launch_description():
     
 
     moveit_py_node = Node(
-        package="python_examples",
+        package="moveit2py_humble_example",
         executable=LaunchConfiguration('example_file'),
         name="moveit_py",
         parameters=[
