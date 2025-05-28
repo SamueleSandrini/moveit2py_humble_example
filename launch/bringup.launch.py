@@ -46,10 +46,10 @@ def generate_launch_description():
     example_file_cmd = DeclareLaunchArgument(
         "example_file",
         default_value="joint_goal",
+        choices=["joint_goal", "pose_goal", "pose_goal_linear", "pose_goal_with_objects"],
         description="Python API tutorial file name",
     )
     
-
     moveit_py_node = Node(
         package="moveit2py_humble_example",
         executable=LaunchConfiguration('example_file'),
